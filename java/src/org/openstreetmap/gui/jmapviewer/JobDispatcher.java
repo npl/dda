@@ -18,12 +18,20 @@ import java.util.concurrent.TimeUnit;
 public class JobDispatcher {
 
     private static final JobDispatcher instance = new JobDispatcher();
+    private static final JobDispatcher instance2 = new JobDispatcher();
 
     /**
      * @return the singelton instance of the {@link JobDispatcher}
      */
     public static JobDispatcher getInstance() {
         return instance;
+    }
+    
+    /**
+     * @return the singelton instance of the {@link JobDispatcher}
+     */
+    public static JobDispatcher getInstance2() {
+        return instance2;
     }
 
     private JobDispatcher() {
@@ -51,6 +59,11 @@ public class JobDispatcher {
      * Number of worker threads currently idle
      */
     protected int workerThreadIdleCount = 0;
+    
+    public void f00()
+    {
+    	System.out.println("workerThreadCount:" + workerThreadCount + " workerThreadIdleCount " + workerThreadIdleCount);
+    }
 
     /**
      * Just an id for identifying an worker thread instance

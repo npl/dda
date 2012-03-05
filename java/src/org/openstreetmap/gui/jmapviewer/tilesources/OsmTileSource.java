@@ -37,7 +37,7 @@ public class OsmTileSource {
 
         @Override
         public int getMaxZoom() {
-            return 17;
+            return 18;
         }
 
         public TileUpdate getTileUpdate() {
@@ -56,7 +56,7 @@ public class OsmTileSource {
 
         @Override
         public int getMaxZoom() {
-            return 17;
+            return 18;
         }
 
         @Override
